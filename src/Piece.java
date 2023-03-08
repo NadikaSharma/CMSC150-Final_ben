@@ -4,14 +4,14 @@ public class Piece { // Represents a game piece used for checkers or chess
 
     public Piece() { // Creates a black man piece in the bottom left corner
         this.state = 'M';
-        this.coords = "A1";
+        this.coords = "A1"; 
     }
 
     public Piece(char state) { // Creates a piece with given a state
         this.state = state;
 
         if (Character.isUpperCase(state)) { // Places piece in bottom left corner if black, top right if white
-            this.coords = "A1";
+            this.coords = "A1"; //This is a really interesting way to place the piece. nice work
         } else {
             this.coords = "H8";
         }
@@ -34,6 +34,6 @@ public class Piece { // Represents a game piece used for checkers or chess
         if (Character.toLowerCase(this.state) == 'm' || Character.toLowerCase(this.state) == 'k') {
             return "" + this.state;
         }
-        return "?";
+        return "?"; //you could make this more specific like an error saying that its invalid.
     }
 }
